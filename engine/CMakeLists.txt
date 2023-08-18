@@ -21,6 +21,8 @@ target_include_directories(${PROJECT_NAME}
         $<INSTALL_INTERFACE:include>
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
         glm
+    PRIVATE
+        glfw
 )
 
 # Link libs
@@ -28,4 +30,5 @@ target_link_libraries(${PROJECT_NAME}
     PUBLIC
         glm
     PRIVATE
+        glfw
 )
