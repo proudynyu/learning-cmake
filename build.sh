@@ -1,8 +1,10 @@
 # /bin/bash
 
-cmake -S . -B build/
+cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -S . -B build/
 
 cd build/
+
+cp ./compile_commands.json ../
 
 make
 
